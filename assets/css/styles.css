@@ -6,6 +6,10 @@
     --primary-color: #0F1B4C;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -51,15 +55,25 @@ a {
 
 /* HEADER */
 .header {
+    padding-top: 26px;
     background: #E6F0FF;
-    height: 100vh;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    background: #E6F0FF;
+    height: calc(100vh - 90px);
     position: relative;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -92,10 +106,6 @@ a {
     padding: 13px 16px;
     margin-left: 18px;
     border-radius: 8px;
-}
-
-.hero {
-    margin-top: 130px;
 }
 
 .hero .info {
@@ -161,10 +171,19 @@ a {
 }
 
 .clients .image {
-    margin-top: 96px;
+    margin-top: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.clients .image a {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    padding: 0 42px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
 }
 
 /* GUIDES */
@@ -596,6 +615,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #F9F9F9;
+}
+
+.footer .social-link + .social-link {
+    margin-left: 16px;
 }
 
 .footer .social-link:hover {
